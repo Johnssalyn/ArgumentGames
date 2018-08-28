@@ -1,0 +1,240 @@
+.demo {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+input{
+    background:transparent;
+    border:0;
+}
+input:focus{
+    border-width:1px;
+    border-color: white;
+    background-color: white;
+}
+#left{
+    position: absolute;
+    top:19px;
+    left:8px;
+    height: 570px;
+    width:80px;
+
+}
+#canvas{
+    position: absolute;
+    top:9px;
+    left: 8px;
+    width: 560px;
+    height: 570px;
+    border: 2px solid orange;
+}
+#middle{
+    position: absolute;
+    top:30px;
+    right:570px;
+    height: 550px;
+    width:117px;
+    /*border: 2px solid orangered;*/
+}
+#right{
+    position: absolute;
+    top:9px;
+    right:9px;
+    height: 570px;
+    width:560px;
+    border: 2px solid orange;
+}
+.c {
+    padding: 16px;
+    position: absolute;
+    z-index: 4;
+    border: 1px solid #2e6f9a;
+    box-shadow: 2px 2px 19px #e0e0e0;
+    -o-box-shadow: 2px 2px 19px #e0e0e0;
+    -webkit-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    opacity: 0.8;
+    cursor: move;
+    background-color: white;
+    font-size: 11px;
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+}
+
+.w {
+    padding: 16px;
+    position: absolute;
+    z-index: 4;
+    border: 1px solid #2e6f9a;
+    box-shadow: 2px 2px 19px #e0e0e0;
+    -o-box-shadow: 2px 2px 19px #e0e0e0;
+    -webkit-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    opacity: 0.8;
+    cursor: move;
+    background-color: white;
+    font-size: 11px;
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+}
+.w .delete {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    display: none;
+    cursor: default;
+}
+.w:hover {
+    background-color: #5c96bc;
+    color: white;
+}
+.aLabel {
+    -webkit-transition: background-color 0.25s ease-in; /* Safari and Chrome */
+    -moz-transition: background-color 0.25s ease-in; /* Firefox 4 */
+    transition: background-color 0.25s ease-in;
+}
+.aLabel.jtk-hover, .jtk-source-hover, .jtk-target-hover {
+    background-color: #1e8151;
+    color: white;
+}
+.aLabel {
+    background-color: white;
+    opacity: 0.8;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    border: 1px solid #346789;
+    cursor: pointer;
+}
+
+
+
+.ep {
+    position: absolute;
+    bottom: 37%;
+    right: 5px;
+    width: 1em;
+    height: 1em;
+    background-color: orange;
+    cursor: pointer;
+    box-shadow: 0 0 2px black;
+    -webkit-transition: -webkit-box-shadow 0.1s ease-in;
+    -moz-transition: -moz-box-shadow 0.1s ease-in;
+    transition: box-shadow 0.1s ease-in;
+}
+.ep:hover {
+    box-shadow: 0 0 6px black;
+}
+.jtk-demo-canvas {
+    height:550px;
+    max-height:700px;
+    border:1px solid #CCC;
+    background-color:white;
+    display: flex;
+}
+.canvas-wide {
+    margin-left:0;
+}
+.jtk-surface {
+    overflow: hidden !important;
+    position: relative;
+    cursor: move;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    /*
+
+        For IE10+. As discussed on this page:
+
+
+
+        https://msdn.microsoft.com/en-us/library/ie/jj583807(v=vs.85).aspx
+
+
+
+        Microsoft have very helpfully implemented default behaviours for a bunch of touch events and
+
+        then consumed the events so you don't have to be bothered by them. They've "done a lot of research"
+
+        about this stuff and put together a really great default experience for everyone in the entire world.
+
+    */
+
+    touch-action:none;
+
+
+
+    /*
+
+        Another Chrome issue that appears to have been fixed in later versions
+
+        http://stackoverflow.com/questions/15464055/css-transition-effect-makes-image-blurry-moves-image-1px-in-chrome
+
+    */
+
+    /*
+
+    -webkit-backface-visibility: hidden;
+
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+
+    */
+
+}
+.jtk-surface-nopan {
+    overflow: scroll !important;
+    cursor:default;
+}
+.statemachine-demo .jtk-endpoint {
+    z-index: 3;
+}
+#opened {
+    left: 10em;
+    top: 5em;
+}
+#phone1 {
+    left: 35em;
+    top: 12em;
+    /*width: 7em;*/
+}
+#phone2 {
+    left: 28em;
+    top: 24em;
+}
+.dragHover {
+    border: 2px solid orange;
+}
+path, .jtk-endpoint { cursor:pointer; }
+
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    stroke: '#f0f';
+    stroke-width: 4px;
+}
+
+.node text {
+    font: 12px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+}
+.fill_normal {
+    fill: green;
+}
+.bling{ animation: alarm 0.4s  ease-in  infinite ; fill:yellow; font-weight: bold;}
+@keyframes alarm {
+    0%{ fill:#FF9966;}
+    50%{ fill:#FF3333;}
+    100%{ fill:#FF9966;}
+}
